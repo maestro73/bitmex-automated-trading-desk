@@ -8,8 +8,8 @@ import db_management as dbm
 import td_sequential as td
 warnings.filterwarnings("ignore")
 
-BITMEX_API_KEY ='y8obDjZz7fWXjzO_dSC5VOIc'
-BITMEX_API_SECRET = 'Qq6Um_SYIysD_PHYuGyAn9ahYrsJTEVookSrI9hgkUj5OuC9'
+BITMEX_API_KEY ='YOUR API KEY'
+BITMEX_API_SECRET = 'YOUR API SECRET'
 
 BITMEX_AVAILABLE_TIMEFRAMES = ["5m", "1h", "1d"]
 ANCH_VWAP_LOOKBACK_VALUES = [50, 100, 150, 200, 600]
@@ -29,11 +29,7 @@ def get_ticker_info(bitmex_client, ticker_name, timeframe_id):
     return bitmex_client.Trade.Trade_getBucketed(symbol = ticker_name, binSize = timeframe_id, partial=True, count=700, reverse=True).result()
 
 
-'''
-{'timestamp': datetime.datetime(2020, 4, 22, 23, 45, tzinfo=tzutc()), 'symbol': 'XBTUSD', 'open': 7118.0, 'high': 7120.5, 
-'low': 7118.0, 'close': 7120.5, 'trades': 518, 'volume': 533329, 'vwap': 7119.4646, 'lastSize': 4766, 'turnover': 7491488860, 
-'homeNotional': 74.91488860000001, 'foreignNotional': 533329.0}
-'''
+
 
 if __name__ == "__main__":
 
