@@ -47,6 +47,5 @@ if __name__ == "__main__":
             print("Unable to compute td_sequential for %s timeframe " % timeframe_id)
             print(exception_e)
 
-        print(vwap_values)
 
 
